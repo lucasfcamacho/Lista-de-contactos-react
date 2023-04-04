@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Cabecera from "./components/Cabecera";
+import ListaDeContactos from "./components/ListaDeContactos";
+import "bootstrap/dist/css/bootstrap.css";
+import AgregarContacto from "./components/AgregarContacto";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AgregarContacto />
+      <Cabecera titulo= "Lista de contactos" />
+      <main className="container">
+         <ListaDeContactos />
+      </main>
     </div>
   );
 }
